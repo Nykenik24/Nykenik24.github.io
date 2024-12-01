@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Main on codex</title>
+    <link>http://localhost:1313/tags/main/</link>
+    <description>Recent content in Main on codex</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© {year}</copyright>
+    <lastBuildDate>Sun, 01 Dec 2024 19:15:53 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/main/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World!</title>
+      <link>http://localhost:1313/blog/helloworld/</link>
+      <pubDate>Sun, 01 Dec 2024 19:15:53 +0100</pubDate>
+      <guid>http://localhost:1313/blog/helloworld/</guid>
+      <description>&lt;h3 id=&#34;about-me&#34;&gt;About me&lt;/h3&gt;&#xA;&lt;p&gt;I am &lt;em&gt;Nykenik24&lt;/em&gt;, some random guy that likes making little &lt;em&gt;(and not so little)&lt;/em&gt; games in &lt;a href=&#34;https://love2d.org&#34; &#xA;  &#xA;   target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34; &#xA;&gt;LOVE2D&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

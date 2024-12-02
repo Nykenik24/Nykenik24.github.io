@@ -1,6 +1,16 @@
 ---
 title: "Welcome to my blog!"
 description: "Home."
+cascade:
+    showTableOfContents: true
+    showSummary: true
+    showAuthor: true
+    showDate: true
+    showComments: true
+    showReadingTime: true
+    showWordCount: true
+    showTaxonomies: true
+    showBreadcrumbs: true
 ---
 
 ```lua

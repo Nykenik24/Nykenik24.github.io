@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project on </title>
+    <link>//localhost:1313/tags/project/</link>
+    <description>Recent content in Project on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Dec 2024 17:10:44 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gauntlet Of Ageon</title>
+      <link>//localhost:1313/projects/gauntlet_of_ageon/</link>
+      <pubDate>Mon, 02 Dec 2024 17:10:44 +0100</pubDate>
+      <guid>//localhost:1313/projects/gauntlet_of_ageon/</guid>
+      <description>&lt;div class=&#34;lead !mb-9 text-xl&#34;&gt;&#xA;  Gauntlet of Ageon&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Gauntlet of Ageon&lt;/strong&gt; is a &lt;em&gt;dungeon crawler&lt;/em&gt;, &lt;em&gt;roguelike&lt;/em&gt; game inspired by &lt;a href=&#34;https://store.steampowered.com/app/1145360/Hades/&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Hades&lt;/a&gt;.&lt;br&gt;&#xA;&lt;br&gt;&#xA;It is being developed by one person &lt;em&gt;(me)&lt;/em&gt;, &lt;strong&gt;and it will most likely be a free game&lt;/strong&gt;, uploaded to &lt;a href=&#34;https://itch.io&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;itch.io&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

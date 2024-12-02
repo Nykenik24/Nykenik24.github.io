@@ -1,14 +1,14 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: {{ .Name }}
 date: {{ .Date }}
 draft: true
 description: ""
-tags: []
+tags: ["post"]
 thumb: true
 params:
-    author: "Nykenik24"
+    author: "Nykenik24" 
 ---
 
 {{< lead >}}
-Post short summary here
+{{ .Name }}
 {{< /lead >}}

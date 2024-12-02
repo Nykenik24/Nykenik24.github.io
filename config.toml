@@ -15,24 +15,52 @@ summaryLength = 5
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
-[menu]
-  [[menu.main]]
+[menus]
+  # main
+  [[menus.main]]
     name = "Homepage"
     pageRef = "/"
     weigth = 10
-  [[menu.main]]
+  [[menus.main]]
     name = "Blog"
     pageRef = "/blog"
     weigth = 20
-  [[menu.main]]
-    identifier = "github"
+  [[menus.main]]
+    name = "Projects"
+    pageRef = "/projects"
+    weigth = 30
+  [[menus.main]]
+    identifier = "github-repo"
     url = "https://github.com/Nykenik24/blog"
     weigth = 40
-    [menu.main.params]
+    [menus.main.params]
       icon = "github"
-  [[menu.main]]
-    identifier = "search"
+  [[menus.main]]
+    name = "All posts"
+    pageRef = "/tags/post"
+    weigth = 50
+  [[menus.main]]
+    identifier = "separator"
     weigth = 99
-    [menu.main.params]
-      action = "search"
-      icon = "magnifying-glass"
+  # footer
+  [[menus.footer]]
+    identifier = "github"
+    url = "https://github.com/Nykenik24"
+    weigth = 10
+    [[menus.footer.params]]
+      icon = "github"
+  [[menus.footer]]
+    identifier = "youtube"
+    url = "https://youtube.com/@nykenik24"
+    weigth = 20
+    [[menus.footer.params]]
+      icon = "youtube"
+  [[menus.footer]]
+    name = "blog"
+    pageRef = "/blog"
+    weigth = 30
+  [[menus.footer]]
+    name = "projects"
+    pageRef = "/projects"
+    weigth = 40
+

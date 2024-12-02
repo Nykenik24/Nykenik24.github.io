@@ -4,25 +4,46 @@
   
     
       <url>
-            <loc>//localhost:1313/blog/</loc>
-            <lastmod>2024-12-01T20:30:46+01:00</lastmod>
+            <loc>//localhost:1313/projects/</loc>
+            <lastmod>2024-12-02T18:11:27+01:00</lastmod>
           </url>
     
   
     
+  
+    
+  
+    
+  
+    
       <url>
-            <loc>//localhost:1313/blog/test/</loc>
-            <lastmod>2024-12-01T20:30:46+01:00</lastmod>
+            <loc>//localhost:1313/projects/gauntlet_of_ageon/posts/the_game/</loc>
+            <lastmod>2024-12-02T18:11:27+01:00</lastmod>
           </url>
     
   
     
       <url>
             <loc>//localhost:1313/</loc>
-            <lastmod>2024-12-01T20:30:46+01:00</lastmod>
+            <lastmod>2024-12-02T18:11:27+01:00</lastmod>
           </url>
     
   
+    
+  
+    
+      <url>
+            <loc>//localhost:1313/projects/gauntlet_of_ageon/</loc>
+            <lastmod>2024-12-02T17:10:44+01:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>//localhost:1313/blog/</loc>
+          </url>
     
   
     

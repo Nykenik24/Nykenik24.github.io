@@ -1,5 +1,6 @@
 ---
-showEdit: true
-cascade:
-    showEdit: true
+title: "Projects"
+description: "All my projects."
 ---
+
+All my projects

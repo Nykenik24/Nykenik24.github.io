@@ -42,6 +42,11 @@ summaryLength = 5
   [[menus.main]]
     identifier = "separator"
     weigth = 99
+  [[menus.main]]
+    identifier = "linktree"
+    url = "https://linktr.ee/nykenik24"
+    [[menus.main.params]]
+      icon = "link"
   # footer
   [[menus.footer]]
     identifier = "github"

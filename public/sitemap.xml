@@ -3,29 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+  
+    
       <url>
             <loc>//localhost:1313/projects/</loc>
-            <lastmod>2024-12-02T18:11:27+01:00</lastmod>
+            <lastmod>2024-12-09T22:25:28+01:00</lastmod>
           </url>
     
   
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>//localhost:1313/projects/gauntlet_of_ageon/posts/the_game/</loc>
-            <lastmod>2024-12-02T18:11:27+01:00</lastmod>
-          </url>
     
   
     
       <url>
             <loc>//localhost:1313/</loc>
-            <lastmod>2024-12-02T18:11:27+01:00</lastmod>
+            <lastmod>2024-12-09T22:25:28+01:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>//localhost:1313/projects/wrong_pong/</loc>
+            <lastmod>2024-12-09T22:25:28+01:00</lastmod>
           </url>
     
   
@@ -36,8 +34,6 @@
             <loc>//localhost:1313/projects/gauntlet_of_ageon/</loc>
             <lastmod>2024-12-02T17:10:44+01:00</lastmod>
           </url>
-    
-  
     
   
     

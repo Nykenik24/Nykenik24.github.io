@@ -1,6 +1,6 @@
 ---
 title: "Love2d tools"
-date: "December 22, 2024"
+date: 2024-12-22T14:15:00+01:00
 draft: false
 description: "Love2d tools is a series of love2d utilities."
 tags: ["project"]
@@ -12,6 +12,7 @@ params:
 {{< lead >}}
 A series of Love2d utilities
 {{< /lead >}}
+
 > Love2d tools is inspired by [batteries.lua](https://github.com/1bardesign/batteries/).
 
 **Love2d tools** *(or love2d-tools)* is a series of **[LOVE2D game framework](https://love2d.org)** utilities to make developing games with Love2d easier and faster. It can make your game developing

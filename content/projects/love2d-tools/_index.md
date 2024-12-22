@@ -7,6 +7,8 @@ tags: ["project"]
 thumb: true
 params:
     author: "Nykenik24" 
+cascade:
+    showSummary: false
 ---
 
 {{< lead >}}

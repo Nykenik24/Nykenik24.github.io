@@ -13,6 +13,7 @@ params:
 Release 1.0.0
 {{< /lead >}}
 
+
 ## Modules:
 
 - **Debug** (`debug`): Helps to debug with an assert function, various types of messages, a "choose statement" that displays a message or other depending on a boolean; etc.
@@ -29,7 +30,7 @@ If you want more releases, consider **starring [the repository](https://github.c
 
 ##  Contributing
 
-To contribute, fork the repository, make all the changes you want and make a pull request. I will try to answer, but if you see i'm not answering ]send me an email](mailto:Nykenik24@proton.me).
+To contribute, fork the repository, make all the changes you want and make a pull request. I will try to answer, but if you see i'm not answering [send me an email](mailto:Nykenik24@proton.me).
 
 [Contributing rules](https://github.com/Nykenik24/love2d-tools/blob/main/README.md#contributing-rules).
 

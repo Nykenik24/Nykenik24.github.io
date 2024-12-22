@@ -9,12 +9,6 @@ params:
     author: "Nykenik24" 
 ---
 
-{{< lead >}}
-Release 1.0.0
-{{< /lead >}}
-
-
-
 ## Modules:
 
 - **Debug** (`debug`): Helps to debug with an assert function, various types of messages, a "choose statement" that displays a message or other depending on a boolean; etc.

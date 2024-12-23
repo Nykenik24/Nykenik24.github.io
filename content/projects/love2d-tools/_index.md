@@ -23,14 +23,6 @@ experience a little bit better by providing useful tools that almost every game 
 It comes with OOP, Timers, a Debugging helper, etc. All modules can be seen in [the repository](https://github.com/Nykenik24/love2d-tools/blob/main/README.md#made-modules).
 > note: Love2d tools is **NOT** perfect, and you should know that bugs can occur and that it is currently **Work In Progress**.
 
-## Contributing
-To contribute to the project, follow these steps:
-1. Fork the repository
-2. Make all the changes you consider
-3. Make a pull request
-
-For more information, see [the project's README.md](https://github.com/Nykenik24/love2d-tools/blob/main/README.md#contributing).
-
 ## Links
 - [GitHub repository](https://github.com/Nykenik24/love2d-tools)
 - [Love2d forum post](https://love2d.org/forums/viewtopic.php?t=96218)

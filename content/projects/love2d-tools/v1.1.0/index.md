@@ -1,5 +1,5 @@
 ---
-title: "Love2d tools v1.0.0"
+title: "Love2d tools v1.1.0"
 date: 2024-12-23T14:13:00+01:00 
 draft: false
 description: "Release 1.1.0"

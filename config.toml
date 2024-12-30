@@ -4,24 +4,39 @@ title = "Nykenik24"
 enableGitInfo = true
 
 [[menu.main]]
-	name = "<u>H</u>ome"
+	name = "<b>H</b>ome"
 	url = "/"
 	weight = 1
 
 [[menu.main]]
-	name = "<u>T</u>ags"
-	url = "/tags"
+	name = "<b>D</b>ocumentations"
+	url = "/docs"
+	weight = 2
+
+[[menu.main]]
+	name = "<b>T</b>ags"
+	url = "tags"
 	weight = 3
 
 [params]
 	description = "Nykenik24's Website"
 
 [markup.highlight]
+	anchorLineNos = false
 	codeFences = true
-	style = "catppuccin-mocha"
+	guessSyntax = false
+	hl_Lines = ""
+	hl_inline = false
+	lineAnchors = ""
+	lineNoStart = 1
+	lineNos = true
 	lineNumbersInTable = false
-	noClasses = false
+	noClasses = true
+	noHl = false
+	style = "base16-snazzy"
+	tabWidth = 4
 
+	
 [markup.goldmark.renderer]
 	unsafe = true
 

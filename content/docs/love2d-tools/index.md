@@ -48,11 +48,15 @@ local mathx = require("love2d-tools.modules.math")
 ```
 
 ## Module list
-#### Modules with documentation
+#### Documented modules
+---
+Here are the modules with already made documentation.
 - OOP
 - Timer
 
-#### Modules with W.I.P documentation
+#### Modules to document
+---
+Here are the modules that will have documentation, but it's not made.
 - Input
 - Message Bus
 - State Machine
@@ -62,7 +66,9 @@ local mathx = require("love2d-tools.modules.math")
 - Logger
 - Debug
 
-#### Modules without documentation
+#### Not documented modules
+---
+Here are the modules that will not have any documentation.
 - Easing
 - Database
 

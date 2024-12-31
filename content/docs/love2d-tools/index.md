@@ -244,6 +244,100 @@ Resets the timer to `Timer.orig`, or to the optional parameter `new_duration`.
 ##### Returns:
 - `seconds: number`: Countdown from `Timer.orig` to 0.
 
+## Input
+### Overview
+The input module allows you to easily map keys to certain actions and check if mouse is hovering an area or being held.
+
+### Custom types
+- `Area`
+    - `x1: number`: Left side.
+    - `y1: number`: Top.
+    - `x2: number`: Right side.
+    - `y2: number`: Bottom.
+
+    ![Area](/img/mouse-area_love2d-tools.png)
+
+### Keyboard methods
+
+#### `Map(key: string, func: function, ...?: table): table`
+---
+Maps a key to an action.
+
+##### Arguments:
+- `key: string`: Key to map.
+- `func: function`: Action.
+- `... (optional): table`: `func`'s arguments.
+
+##### Returns:
+- `keybind: table`: The keybind with the action and args.
+
+#### `Input:UpdateKeys(current: string)`
+---
+Updates all keybinds. Has to be called inside `love.keypressed(key)`, not inside `love.update`, with first argument (`current`) being `love.keypressed`'s first argument (`key`).
+{{< box info >}}
+**Example**
+
+```lua
+function love.keypressed(key)
+   Input:UpdateKeys(key)
+end
+```
+{{< /box >}}
+
+##### Arguments:
+- `current: string`: The key that was pressed now.
+
+### Mouse methods
+
+#### `IsHovering(x1: number, y1: number, x2: number, y2: number): boolean`
+---
+Checks if mouse is hovering a certain area *(see **input --> custom types**)*.
+
+##### Arguments:
+- `x1: number`: Left side.
+- `y1: number`: Top.
+- `x2: number`: Right side.
+- `y2: number`: Bottom.
+
+##### Returns:
+- `hovering: boolean`: True if it is hovering.
+
+#### `IsHoldingMouse(): boolean, number`
+---
+Checks if the user is holding a mouse button. If they are then returns also what mouse button.
+
+##### Returns:
+- `Holded: boolean`: True if a mouse button is being holded.
+- `Button: number`: Mouse button being holded.
+    - **1**: Left button.
+    - **2**: Right button.
+    - **3**: Middle button.
+    - **0**: No button is being holded.
+
+#### `MouseButtonHolded(button: number): boolean`
+---
+Checks if a specific mouse button is being holded.
+
+##### Arguments:
+- `button: number`: Mouse button.
+    - **1**: Left button.
+    - **2**: Right button.
+    - **3**: Middle button.
+    - **0**: No button is being holded.
+
+##### Returns:
+- `holded: boolean`: The mouse button is being holded.
+
+#### `IfHovering(area: Area, func: function, ...?: table): boolean, any`
+Checks if the mouse is hovering `area`, calls `func` with `...` *(args)* and returns:
+- If it is hovering.
+- `func` returned values.
+
+##### Arguments:
+- `area: Area`: Area that has to be hovered.
+- `func: function`: Function called if hovered.
+- `... (optional): table`: `func`'s argument.
+
 [^1]: *src: [This wikipedia page](https://en.wikipedia.org/wiki/Object-oriented_programming)*\
 Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields (often known as attributes or properties), andcode in the form of procedures (often known as methods). In OOP, computer programs are designed by making them out of objects that interact with one another. 
 

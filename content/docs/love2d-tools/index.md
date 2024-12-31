@@ -50,9 +50,9 @@ local mathx = require("love2d-tools.modules.math")
 ## Module list
 #### Modules with documentation
 - OOP
+- Timer
 
 #### Modules with W.I.P documentation
-- Timer
 - Input
 - Message Bus
 - State Machine
@@ -69,7 +69,7 @@ local mathx = require("love2d-tools.modules.math")
 ## OOP
 ### Overview
 The **OOP** module implements **Object Oriented Programming** [^1], including objects, subclasses, etc. This makes for a very useful module when it comes to entities:\
-Lets imagine we have an enemy called *goblin*, an enemy called *skeleton* and an enemy called *slime*. Classes would allow us to implement them easily with a superclass [^2], making a 
+Lets imagine we have an enemy called *goblin*, an enemy called *skeleton* and an enemy called *slime*. Classes would allow us to implement them easily with a superclass[^2], making a 
 subclass[^3] for every type of enemy:
 ```lua {hl_lines=["3-8", "10-15", "19-21"]}
 local class = require("love2d-tools.modules.class") -- OOP module
@@ -94,6 +94,13 @@ Goblin1 = GoblinClass:new() -- The `extend()` method returns the subclass
 -- or
 Goblin1 = EnemyClass.sub.GoblinClass:new() -- Access from the superclass
 ```
+### Custom types
+- `Class`
+    - `attributes: table`: Class's attributes.
+    - `sub: table`: Class's subclasses[^3].
+    - `id: string`: Class's identification pattern. Class's objects will have the same id.
+    - All methods below that start with `Class:`.
+
 ### Methods
 
 #### `NewClass(attributes: table): Class`
@@ -103,7 +110,7 @@ Goblin1 = EnemyClass.sub.GoblinClass:new() -- Access from the superclass
 {{< box info >}}
 **Module returns the method**
 
-This method is returned by the module, so to call it you just need to `require` the module call
+This method is returned by the module, so to call it you just need to `require` the module and call
 the module like it was a function.
 ```lua
 local class = require("love2d-tools.modules.class") --require the module
@@ -169,6 +176,68 @@ Checks if an **object comes from a class** comparing the object's id and the cla
 ##### Returns:
 - `is: boolean`: True if the object comes from the class, false otherwise.
 
+## Timer
+### Overview
+This module allows you to create simple timers, allowing to delay attacks, create eased animations, etc.
+
+### Custom types
+- `Timer`
+    - `orig: number`: Original duration.
+    - `seconds: number`: Countdown from `orig` to 0.
+    - `rounded_seconds: integer`: Rounded `seconds`.
+    - `elapsed: boolean`: True if timer ended.
+    - `OnEnd: function`: Called when timer ends. Made to be modified.
+    - All methods below that start with `Timer:`.
+
+### Methods
+
+#### `new(duration: number): Timer`
+---
+<details>
+<summary>Note</summary>
+{{< box info >}}
+**Module returns the method**
+
+This method is returned by the module, so to call it you just need to `require` the module and call
+the module like it was a function.
+```lua
+local timer = require("love2d-tools.modules.timer") --require the module
+local my_timer = timer(5) --call the `new` method
+```
+{{< /box >}}
+</details>
+
+Creates a new **timer**.
+
+##### Arguments:
+- `duration: number`: Timer's duration.
+
+##### Returns:
+- `timer: Timer`: The new timer.
+
+#### `Timer:Update(self: Timer, dt: number): number, boolean`
+---
+Updates the timer, has to be called in the `love.update(dt)` function.
+
+##### Arguments:
+- `self: Timer`: The timer.
+- `dt: number`: Delta time[^4].
+
+##### Returns:
+- `seconds: number`: Countdown from `Timer.orig` to 0.
+- `elapsed: boolean`: True if timer ended.
+
+#### `Timer:Reset(self: Timer, new_duration?: number): number`
+---
+Resets the timer to `Timer.orig`, or to the optional parameter `new_duration`.
+
+##### Arguments:
+- `self: Timer`: The timer.
+- `new_duration (optional): number`: New timer duration.
+
+##### Returns:
+- `seconds: number`: Countdown from `Timer.orig` to 0.
+
 [^1]: *src: [This wikipedia page](https://en.wikipedia.org/wiki/Object-oriented_programming)*\
 Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields (often known as attributes or properties), andcode in the form of procedures (often known as methods). In OOP, computer programs are designed by making them out of objects that interact with one another. 
 
@@ -177,3 +246,6 @@ A superclass is the class from which many subclasses can be created. The subclas
 
 [^3]: *src: [This article](https://www.tutorialspoint.com/Subclasses-Superclasses-and-Inheritance)*\
 A subclass is a class derived from the superclass. It inherits the properties of the superclass and also contains attributes of its own.
+
+[^4]: *src: [This wikipedia page](https://en.wikipedia.org/wiki/Delta_timing)*\
+Delta time or delta timing is a concept used amongst programmers in relation to hardware and network responsiveness. In graphics programming, the term is usually used for variably updating scenery based on the elapsed time since the game last updated, (i.e. the previous "frame") which will vary depending on the speed of the computer, and how much work needs to be done in the program at any given time. This also allows graphics to be calculated separately if graphics are being multi-threaded.

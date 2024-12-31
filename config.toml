@@ -18,6 +18,11 @@ enableGitInfo = true
 	url = "tags"
 	weight = 3
 
+[[menu.main]]
+	name = "<b>R</b>epository"
+	url = "https://github.com/Nykenik24/Nykenik24.github.io"
+	weight = 4
+
 [params]
 	description = "Nykenik24's Website"
 

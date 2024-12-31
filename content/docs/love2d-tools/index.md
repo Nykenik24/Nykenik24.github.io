@@ -28,7 +28,7 @@ git submodule add https://github.com/Nykenik24/love2d-tools.git path/to/library
 {{< /tab >}}
 
 {{< tab "Release" >}}
-Download the latest release.
+Download the [latest release](https://github.com/Nykenik24/love2d-tools/releases).
 <p class="imgp">
   <img
     style="max-height: 50vh;border: solid rgb(100, 100, 255) 2px;border-radius: 12px;"

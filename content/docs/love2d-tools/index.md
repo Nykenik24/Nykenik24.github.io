@@ -58,11 +58,11 @@ Here are the modules with already made documentation.
 - State Machine
 - Vector2
 - Mathx
+- Tablex
 
 #### Modules to document
 ---
 Here are the modules that will have documentation, but it's not made.
-- Tablex
 - Logger
 - Debug
 

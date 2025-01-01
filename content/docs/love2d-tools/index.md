@@ -47,31 +47,6 @@ local love2d-tools = require("love2d-tools.lib")
 local mathx = require("love2d-tools.modules.math")
 ```
 
-## Module list
-#### Documented modules
----
-Here are the modules with already made documentation.
-- OOP
-- Timer
-- Input
-- Message Bus
-- State Machine
-- Vector2
-- Mathx
-- Tablex
-- Debug
-- Logger
-
-#### Modules to document
----
-Here are the modules that will have documentation, but it's not made.
-
-#### Not documented modules
----
-Here are the modules that will not have any documentation.
-- Easing
-- Database
-
 ## OOP
 ### Overview
 The **OOP** module implements **Object Oriented Programming** [^1], including objects, subclasses, etc. This makes for a very useful module when it comes to entities:\

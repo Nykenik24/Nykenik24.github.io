@@ -59,11 +59,11 @@ Here are the modules with already made documentation.
 - Vector2
 - Mathx
 - Tablex
+- Debug
 
 #### Modules to document
 ---
 Here are the modules that will have documentation, but it's not made.
-- Debug
 - Logger
 
 #### Not documented modules

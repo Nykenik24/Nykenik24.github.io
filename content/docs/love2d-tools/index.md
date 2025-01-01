@@ -60,11 +60,11 @@ Here are the modules with already made documentation.
 - Mathx
 - Tablex
 - Debug
+- Logger
 
 #### Modules to document
 ---
 Here are the modules that will have documentation, but it's not made.
-- Logger
 
 #### Not documented modules
 ---
@@ -927,6 +927,77 @@ Checks if a value is one of the values in the first argument *(a table)*. If not
 Checks if a value is of a certain type or `nil`. If not makes an error jump.
 
 
+## Logger
+### Overview
+Logging utility that runs in a separate thread for minimum performance loss.
+
+### Methods
+
+#### `Choose(boolean: boolean, types: table, messages: table): table`
+---
+- If `boolean` is `true`:\
+Logs `messages.yes` with type `types.yes` (or `ok`).
+- If `boolean` is `false`:\
+Logs `messages.no` with type `types.no` (or `error`).
+
+##### Arguments:
+- `boolean: boolean`: Condition.
+- `types: table`: Log types:
+    - `types.no` is the type used if `boolean` is `false`. Default is `error`.
+    - `types.yes` is the type used if `boolean` is `true`. Default is `ok`.
+- `messages: table`: Messages:
+    - `messages.no` is logged if `boolean` is `false`.
+    - `messages.yes` is logged if `boolean` is `true`.
+
+##### Returns:
+- `Chained: table`: Used to chain messages.
+
+#### `PrintTable(t: table)`
+---
+Prints a table in a readable format.
+
+{{< box info >}}
+**Colors**
+
+Uses *ANSI* colors.
+{{< /box >}}
+
+##### Arguments:
+- `t: table`: Table printed.
+
+#### `startSVC()`
+---
+Starts the logging service.
+
+#### `stopSVC()`
+---
+Stops the logging service.
+
+### Log types
+- Regular (`regular`)
+    - Color: white.
+    - Used for: Regular messages.
+- Trace (`trace`)
+    - Color: blue.
+    - Used for: Tracing[^7].
+- Debug (`debug`)
+    - Color: cyan.
+    - Used for: Common debugging messages.
+- Info (`info`)
+    - Color: green.
+    - Used for: Notes/information.
+- Ok (`ok`)
+    - Color: green.
+    - Used for: Indicating something worked.
+- Warning (`warn`)
+    - Color: yellow.
+    - Used for: Warnings.
+- Error (`error`)
+    - Color: red.
+    - Used for: Errors.
+- Fatal error (`fatal`)
+    - Color: magenta.
+    - Used for: Fatal errors.
 
 [^1]: **OOP** *src: [This wikipedia page](https://en.wikipedia.org/wiki/Object-oriented_programming)*\
 Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields (often known as attributes or properties), andcode in the form of procedures (often known as methods). In OOP, computer programs are designed by making them out of objects that interact with one another. 
@@ -945,3 +1016,6 @@ Event-driven architecture (EDA) is a software architecture paradigm concerning t
 
 [^6]: **Vector2** *src: [This wikpedia page](https://en.wikipedia.org/wiki/Vector_%28mathematics_and_physics%29)*\
 In mathematics and physics, vector is a term that refers to quantities that cannot be expressed by a single number (a scalar), or to elements of some vector spaces. They have to be expressed by both magnitude and direction. 
+
+[^7]: **Tracing** *src: [This stack overflow answer](https://stackoverflow.com/a/27244884)*\
+Besides Error Reporting, you also need to trace your program flow to find out where the performance bottlenecks are; even more importantly, when an error occurs, you have a chance to find out how you did get there. In an ideal world, every function would have some tracing enabled with the function duration, passed parameters, and how far you did get into your function.

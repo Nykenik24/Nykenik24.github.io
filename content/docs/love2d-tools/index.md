@@ -142,7 +142,7 @@ Creates a new **object** from a class. This method is inside all classes.
 
 #### `Class:extend(self: Class, attributes: table): Class`
 ---
-Creates a **subclass**[^2] from a **superclass**[^3].
+Creates a **subclass** [^3] from a **superclass**[^2].
 
 ##### Arguments:
 - `self: Class`: The superclass.
@@ -338,14 +338,63 @@ Checks if the mouse is hovering `area`, calls `func` with `...` *(args)* and ret
 - `func: function`: Function called if hovered.
 - `... (optional): table`: `func`'s argument.
 
-[^1]: *src: [This wikipedia page](https://en.wikipedia.org/wiki/Object-oriented_programming)*\
+## Message Bus
+### Overview
+Message bus that handles publishers and subscribers, giving a simple **EDA**[^5] implementation to make your game events.
+
+### Methods
+
+#### `NewSubPoint(idlen?: number): table`
+---
+Creates a new **subscription point**.
+
+##### Arguments:
+- `idlen (optional): number`: Subscription point ID length. Default is 16.
+
+##### Returns:
+- `SubPoint: table`: A subscription point object with an ID and a method to retrieve messages.
+
+#### `GetMsg(type: string|nil): any`
+---
+Retrieves messages for a subscription point or broadcasts.
+
+##### Arguments:
+- `type: string or nil`: The type of message to retrieve:
+    - `nil`: Messages only for the subscription point.
+    - `broadcast`: Messages for all subscription points.
+
+##### Returns:
+- `Content: any`: Content of the message.
+
+#### `SendMessage(id: string, content: any)`
+---
+Sends a message to an specific subscription point.
+
+##### Arguments:
+- `id: string`: The **ID** of the subscription point.
+- `content: any`: The **content** of the message.
+
+#### `Broadcast(content: any): table`
+---
+Sends a message to **ALL** subscription points.
+
+##### Arguments:
+- `content: any`: The content to broadcast to all subscription points.
+
+##### Returns:
+- `Broadcast: table`: An object with a position and a method to end the broadcast.
+
+[^1]: **OOP** *src: [This wikipedia page](https://en.wikipedia.org/wiki/Object-oriented_programming)*\
 Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields (often known as attributes or properties), andcode in the form of procedures (often known as methods). In OOP, computer programs are designed by making them out of objects that interact with one another. 
 
-[^2]: *src: [This article](https://www.tutorialspoint.com/Subclasses-Superclasses-and-Inheritance)*\
+[^2]: **Superclass** *src: [This article](https://www.tutorialspoint.com/Subclasses-Superclasses-and-Inheritance)*\
 A superclass is the class from which many subclasses can be created. The subclasses inherit the characteristics of a superclass. The superclass is also known as the parent class or base class.
 
-[^3]: *src: [This article](https://www.tutorialspoint.com/Subclasses-Superclasses-and-Inheritance)*\
+[^3]: **Subclass** *src: [This article](https://www.tutorialspoint.com/Subclasses-Superclasses-and-Inheritance)*\
 A subclass is a class derived from the superclass. It inherits the properties of the superclass and also contains attributes of its own.
 
-[^4]: *src: [This wikipedia page](https://en.wikipedia.org/wiki/Delta_timing)*\
+[^4]: **Delta time** *src: [This wikipedia page](https://en.wikipedia.org/wiki/Delta_timing)*\
 Delta time or delta timing is a concept used amongst programmers in relation to hardware and network responsiveness. In graphics programming, the term is usually used for variably updating scenery based on the elapsed time since the game last updated, (i.e. the previous "frame") which will vary depending on the speed of the computer, and how much work needs to be done in the program at any given time. This also allows graphics to be calculated separately if graphics are being multi-threaded.
+
+[^5]: **EDA** *src: [This wikipedia page](https://en.wikipedia.org/wiki/Event-driven_architecture)*\
+Event-driven architecture (EDA) is a software architecture paradigm concerning the production and detection of events. Event-driven architectures are evolutionary in nature and provide a high degree of fault tolerance, performance, and scalability. However, they are complex and inherently challenging to test. EDAs are good for complex and dynamic workloads. 

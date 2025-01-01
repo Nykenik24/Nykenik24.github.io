@@ -384,6 +384,74 @@ Sends a message to **ALL** subscription points.
 ##### Returns:
 - `Broadcast: table`: An object with a position and a method to end the broadcast.
 
+## State machine
+### Overview
+Allows for the creation of state machines to control different states, such as: paused, playing, inside shop, etc.
+
+### Custom types
+- `StateMachine`:
+    - `states: table`: Defined states.
+    - `current: string`: Current state's name.
+    - All methods below that start with `StateMachine:`.
+- `State`:
+    - `enabled: boolean`: State's current state.
+
+### Methods
+
+#### `StateMachine:NewState(self: StateMachine, name: string, enabled: boolean, info: table): State`
+---
+Create a new state.
+
+##### Arguments:
+- `self: StateMachine`: The state machine where the state resides.
+- `name: string`: The name of the state machine.
+- `enabled: boolean`: State's default state.
+- `info: table`: Additional information stored in the state.
+
+##### Returns:
+- `State: State`: Created state.
+
+#### `StateMachine:SetState(self: StateMachine, name: string): boolean`
+---
+Sets current state.
+
+##### Arguments:
+- `self: StateMachine`: The state machine where the state resides.
+- `name: string`: State's name.
+
+##### Returns:
+- `Succes: boolean`: False if state doesn't exist inside the state machine.
+
+#### `StateMachine:GetState(self: StateMachine): State, string`
+---
+Returns the current state.
+
+##### Arguments:
+- `self: StateMachine`: The state machine.
+
+##### Returns:
+- `State: State`: Current state.
+- `Name: string`: Current state's name.
+
+#### `StateMachine:Exists(self: StateMachine, name: string): boolean`
+---
+Checks if a state exists inside the state machine.
+
+##### Arguments:
+- `self: StateMachine`: The state machine.
+- `name: string`: The state's name.
+
+##### Returns:
+- `Exists: boolean`: True if state exists, false otherwise.
+
+#### `StateMachine:Update(self: StateMachine, dt?: number)`
+---
+Call current state's update method.
+
+##### Arguments:
+- `self: StateMachine`: The state machine.
+- `dt (optional): number`: Delta time[^4].
+
 [^1]: **OOP** *src: [This wikipedia page](https://en.wikipedia.org/wiki/Object-oriented_programming)*\
 Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields (often known as attributes or properties), andcode in the form of procedures (often known as methods). In OOP, computer programs are designed by making them out of objects that interact with one another. 
 

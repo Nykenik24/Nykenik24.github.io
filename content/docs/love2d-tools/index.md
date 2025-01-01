@@ -56,11 +56,11 @@ Here are the modules with already made documentation.
 - Input
 - Message Bus
 - State Machine
+- Vector2
 
 #### Modules to document
 ---
 Here are the modules that will have documentation, but it's not made.
-- Vector2
 - Mathx
 - Tablex
 - Logger

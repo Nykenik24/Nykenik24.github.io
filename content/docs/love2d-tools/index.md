@@ -398,6 +398,26 @@ Allows for the creation of state machines to control different states, such as: 
 
 ### Methods
 
+#### `new(): StateMachine`
+---
+<details>
+<summary>Note</summary>
+{{< box info >}}
+**Module returns the method**
+
+This method is returned by the module, so to call it you just need to `require` the module and call
+the module like it was a function.
+```lua
+local state = require("love2d-tools.modules.state") --require the module
+local my_state_machine = state() --call the `new` method
+```
+{{< /box >}}
+</details>
+Creates a new state machine.
+
+##### Returns:
+- `Machine: StateMachine`: Created state machine.
+
 #### `StateMachine:NewState(self: StateMachine, name: string, enabled: boolean, info: table): State`
 ---
 Create a new state.
@@ -452,6 +472,130 @@ Call current state's update method.
 - `self: StateMachine`: The state machine.
 - `dt (optional): number`: Delta time[^4].
 
+## Vector2
+### Overview
+Vector2[^6] implementation. Useful for positions or directions.
+
+### Custom types
+- `Vector2`:
+    - `x: number`: *x* coordinate.
+    - `y: number`: *y* coordinate.
+    - `angle: number`: Vector angle.
+    - All methods below that start with `Vector2:`.
+
+### Methods
+
+#### `new(x: number, y: number): Vector2`
+---
+<details>
+<summary>Note</summary>
+{{< box info >}}
+**Module returns the method**
+
+This method is returned by the module, so to call it you just need to `require` the module and call
+the module like it was a function.
+```lua
+local vec2 = require("love2d-tools.modules.vec2") --require the module
+local my_vector = vec2(0, 0) --call the `new` method
+```
+{{< /box >}}
+</details>
+Creates a new vector.
+
+##### Arguments:
+- `x: number`: *x* coordinate.
+- `y: number`: *y* coordinate.
+
+##### Returns:
+- `Vector: Vector2`: Created vector.
+
+#### `Vector2:Compare(self: Vector2, b: Vector2): Vector2`
+---
+Compare x-coordinate and y-coordinate of both vectors. Returns the vector that has the largest
+x-coordinate and largest y-coordinate.
+
+##### Arguments:
+- `self: Vector2`: First vector.
+- `b: Vector2`: Second vector.
+
+##### Returns:
+- `Winner: Vector2`: Winner.
+
+#### `Vector2:CompareX(self: Vector2, b: Vector2): Vector2`
+---
+Compare x-coordinate of both vectors. Returns the vector that has the largest
+x-coordinate.
+
+##### Arguments:
+- `self: Vector2`: First vector.
+- `b: Vector2`: Second vector.
+
+##### Returns:
+- `Winner: Vector2`: Winner.
+
+#### `Vector2:CompareY(self: Vector2, b: Vector2): Vector2`
+---
+Compare y-coordinate of both vectors. Returns the vector that has the largest y-coordinate.
+
+##### Arguments:
+- `self: Vector2`: First vector.
+- `b: Vector2`: Second vector.
+
+##### Returns:
+- `Winner: Vector2`: Winner.
+
+#### `Vector2:Rotate(self: Vector2, angle: number): number`
+---
+Rotates vector by `angle`.
+
+##### Arguments:
+- `self: Vector2`: Vector rotated.
+- `angle: number`: Rotation.
+
+##### Returns:
+- `Final: number`: Final angle.
+
+#### `Vector2:Move(self: Vector2, x: number, y: number): Vector2`
+---
+Moves vector by `x` and `y`.
+
+##### Arguments:
+- `self: Vector2`: Vector moved.
+- `x: number`: x-coordinate addition.
+- `y: number`: y-coordinate addition.
+
+##### Returns:
+- `Moved: Vector2`: Moved vector.
+
+#### `Vector2:Translate(self: Vector2, x: number, y: number): Vector2`
+---
+Moves vector **to** `x` and `y`.
+
+##### Arguments:
+- `self: Vector2`: Vector moved.
+- `x: number`: New x-coordinate.
+- `y: number`: New y-coordinate.
+
+##### Returns:
+- `Translated: Vector2`: Moved vector.
+
+#### `Vector2:Draw(self: Vector2, orig_x?: number, orig_y?: number)`
+---
+Displays the vector. Uses `love` draw calls.
+
+##### Arguments:
+- `self: Vector2`: Displayed vector.
+- `orig_x (optional): number`: Origin x. Default is center of screen.
+- `orig_y (optional): number`: Origin y. Default is center of screen.
+
+<details>
+<summary>Simple Vector2 representation</summary>
+
+![Vector2](/img/vector2_love2d-tools.png)
+
+</details>
+
+
 [^1]: **OOP** *src: [This wikipedia page](https://en.wikipedia.org/wiki/Object-oriented_programming)*\
 Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields (often known as attributes or properties), andcode in the form of procedures (often known as methods). In OOP, computer programs are designed by making them out of objects that interact with one another. 
 
@@ -466,3 +610,6 @@ Delta time or delta timing is a concept used amongst programmers in relation to 
 
 [^5]: **EDA** *src: [This wikipedia page](https://en.wikipedia.org/wiki/Event-driven_architecture)*\
 Event-driven architecture (EDA) is a software architecture paradigm concerning the production and detection of events. Event-driven architectures are evolutionary in nature and provide a high degree of fault tolerance, performance, and scalability. However, they are complex and inherently challenging to test. EDAs are good for complex and dynamic workloads. 
+
+[^6]: **Vector2** *src: [This wikpedia page](https://en.wikipedia.org/wiki/Vector_%28mathematics_and_physics%29)*\
+In mathematics and physics, vector is a term that refers to quantities that cannot be expressed by a single number (a scalar), or to elements of some vector spaces. They have to be expressed by both magnitude and direction. 

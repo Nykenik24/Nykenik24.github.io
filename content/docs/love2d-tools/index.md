@@ -754,6 +754,141 @@ Normalize a vector.
 - `x: number`: Normalized x.
 - `y: number`: Normalized y.
 
+## Tablex
+### Overview
+Lua standard `table` library extension.
+
+### Methods
+
+#### `Tablex:InsertMethods(tabl: table): table`
+---
+Inserts all methods of the module into a table. All methods will start with *"_"*.
+
+{{< box warning >}}
+**Performance**
+
+This can affect performance. Use wisely.
+{{< /box >}}
+
+##### Arguments:
+- `tabl: table`: The table where methods are inserted.
+
+##### Returns:
+- `Table: table`: Same table, to chain methods.
+
+#### `ForEach(tabl: table, func: function, ...?: table): table`
+---
+For each element in a table calls `func` with arguments:
+- Element.
+- All arguments given after `func`.
+
+##### Arguments:
+- `tabl: table`: Table.
+- `func: function`: Function called.
+- `... (optional): table`: Arguments for `func`.
+
+##### Returns:
+- `Table: table`: Same table, to chain methods.
+
+#### `IndexOf(tabl: table, val: any): number|nil, table`
+---
+Returns index of a value inside a table.
+
+##### Arguments:
+- `tabl: table`: Table.
+- `val: any`: Value.
+
+##### Returns:
+- `index: number or nil`: Index of value. `nil` if value was not found.
+- `Table: table`: Same table, to chain methods.
+
+#### `KeyOf(tabl: table, val: any): string|nil, table`
+---
+Returns key of a value inside a table.
+
+##### Arguments:
+- `tabl: table`: Table.
+- `val: any`: Value.
+
+##### Returns:
+- `key: string or nil`: Key of value. `nil` if value was not found.
+- `Table: table`: Same table, to chain methods.
+
+#### `Select(tabl: table, i: number, j: number): table, table`
+---
+Returns all values of `tabl` from `i` to `j`.
+
+##### Arguments:
+- `tabl: table`: Table.
+- `i: number`: Position 1.
+- `j: number`: Position 2.
+
+##### Returns:
+- `Selection: table`: Selected elements.
+- `Table: table`: Same table, to chain methods.
+
+#### `Merge(a: table, b: table): table, table`
+---
+Merges table `a` with table `b`.
+
+##### Arguments:
+- `a: table`: First table.
+- `b: table`: Second table.
+
+##### Returns:
+- `Merged: table`: Merged tables.
+- `Table: table`: First table, to chain methods.
+
+#### `InsertWithoutDuplicate(tabl: table, val: any): boolean, table`
+---
+Inserts an element into a table **only if it isn't in the table already**.
+
+##### Arguments:
+- `tabl: table`: Table.
+- `val: any`: Value.
+
+##### Returns:
+- `Succes: boolean`: False if it was in the table already.
+- `Table: table`: Same table, to chain methods.
+
+#### `Keys(tabl: table): table`
+---
+Returns all keys from a table.
+
+##### Arguments:
+- `tabl: table`: Table where keys reside.
+
+##### Returns:
+- `Keys: table`: Table's keys.
+- `Table: table`: Same table, to chain methods.
+
+#### `ShallowCopy(tabl: table): table, table`
+---
+Create a copy of only the **top level** and **children** of a table.
+
+##### Arguments:
+- `tabl: table`: Table copied.
+
+##### Returns:
+- `Copy: table`: Copy.
+- `Table: table`: Same table, to chain methods.
+
+#### `DeepCopy(tabl: table): table, table`
+---
+Create a copy of **all levels** of a table.
+
+{{< box warning >}}
+**Performance**
+
+This can affect performance if used with large tables, as it operates recursively.
+{{< /box >}}
+
+##### Arguments:
+- `tabl: table`: Table copied.
+
+##### Returns:
+- `Copy: table`: Copy.
+- `Table: table`: Same table, to chain methods.
 
 [^1]: **OOP** *src: [This wikipedia page](https://en.wikipedia.org/wiki/Object-oriented_programming)*\
 Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields (often known as attributes or properties), andcode in the form of procedures (often known as methods). In OOP, computer programs are designed by making them out of objects that interact with one another. 

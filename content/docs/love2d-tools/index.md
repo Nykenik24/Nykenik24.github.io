@@ -63,8 +63,8 @@ Here are the modules with already made documentation.
 #### Modules to document
 ---
 Here are the modules that will have documentation, but it's not made.
-- Logger
 - Debug
+- Logger
 
 #### Not documented modules
 ---
@@ -889,6 +889,44 @@ This can affect performance if used with large tables, as it operates recursivel
 ##### Returns:
 - `Copy: table`: Copy.
 - `Table: table`: Same table, to chain methods.
+
+## Debug
+##### Alias: Assert
+### Overview
+Set of assert functions, useful when debugging.
+
+### Assert types
+*All assert types take an optional string called `msg` as last argument and return passed valuesif assertion doesn't fail*
+
+#### Normal assert (`Assert`)
+---
+Takes an `any` value as first argument. If the value is `false` or `nil`, an error jumps.
+
+#### Log assert (`LogAssert`)
+---
+Same as normal assert, but instead of an error jumping, a message is logged.
+
+#### Equal (`Equal`)
+---
+Takes two values and checks if they are equal. If they are not makes an error jump.
+
+#### Not equal (`NotEqual`)
+---
+Takes two values and checks if they are not equal. If they are makes an error jump.
+
+#### Is type (`IsType`)
+---
+Checks if a value is of a certain type. If not makes an error jump.
+
+#### Is one of (`IsOneOf`)
+---
+Checks if a value is one of the values in the first argument *(a table)*. If not makes an error jump.
+
+#### Is optional type (`IsOptionalType`)
+---
+Checks if a value is of a certain type or `nil`. If not makes an error jump.
+
+
 
 [^1]: **OOP** *src: [This wikipedia page](https://en.wikipedia.org/wiki/Object-oriented_programming)*\
 Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields (often known as attributes or properties), andcode in the form of procedures (often known as methods). In OOP, computer programs are designed by making them out of objects that interact with one another. 

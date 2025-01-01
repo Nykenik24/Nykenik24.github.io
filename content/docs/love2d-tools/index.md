@@ -595,6 +595,165 @@ Displays the vector. Uses `love` draw calls.
 
 </details>
 
+## Mathx
+### Overview
+Lua standard `math` library extension with useful mathematic functions, like `Lerp`, `Clamp`, etc.
+
+### Methods
+
+#### `Lerp(start: number, ending: number, factor: number): number`
+---
+Linear interpolation between `start` and `ending`.
+
+##### Arguments:
+- `start: number`: Starting value.
+- `ending: number`: Ending value.
+- `factor: number`: Interpolation factor. Range: 0-1.
+
+##### Returns:
+- `Interpolated: number`: Interpolated value.
+
+#### `Clamp(value: number, minimum: number, maximum: number): number`
+---
+Restricts a value to the specified range.
+
+##### Arguments:
+- `value: number`: Value to restrict.
+- `minimum: number`: Minimum range.
+- `maximum: number`: Maximum range.
+
+##### Returns:
+- `Clamped: number`: Clamped value.
+
+#### `Wrap(value: number, minimum: number, maximum: number): number`
+---
+Wraps a value to the specified range.
+
+##### Arguments:
+- `value: number`: Value to wrap.
+- `minimum: number`: Minimum range.
+- `maximum: number`: Maximum range.
+
+##### Returns:
+- `Wrapped: number`: Wrapped value.
+
+#### `DistanceBetweenVectors(Vector1: Vector2, Vector2: Vector2): number`
+---
+Calculates the distance between two vectors.
+
+##### Arguments:
+- `Vector1: Vector2`: First vector.
+- `Vector2: Vector2`: Second vector.
+
+##### Returns:
+- `Distance: number`: Distance between the vectors.
+
+#### `DistanceBetweenPoints(x1: number, y1: number, x2: number, y2: number): number`
+---
+Calculates the distance between two points.
+
+##### Arguments:
+- `x1: number`: x-coordinate of point 1.
+- `y1: number`: y-coordinate of point 1.
+- `x2: number`: x-coordinate of point 2.
+- `y2: number`: y-coordinate of point 2.
+
+##### Returns:
+- `Distance: number`: Distance between points.
+
+#### `VectorDotProduct(Vector1: Vector2, Vector2: Vector2): number`
+---
+Calculates the dot product of two vectors.
+
+##### Arguments:
+- `Vector1: Vector2`: First vector.
+- `Vector2: Vector2`: Second vector.
+
+##### Returns:
+- `Product: number`: Dot product.
+
+#### `PointDotProduct(x1: number, y1: number, x2: number, y2: number): number`
+---
+Calculates the dot product of two points.
+
+##### Arguments:
+- `x1: number`: x-coordinate of point 1.
+- `y1: number`: y-coordinate of point 1.
+- `x2: number`: x-coordinate of point 2.
+- `y2: number`: y-coordinate of point 2.
+
+##### Returns:
+- `Product: number`: Dot product.
+
+#### `VectorCrossProduct(Vector1: Vector2, Vector2: Vector2): number`
+---
+Calculates the cross product of two vectors.
+
+##### Arguments:
+- `Vector1: Vector2`: First vector.
+- `Vector2: Vector2`: Second vector.
+
+##### Returns:
+- `Product: number`: Cross product.
+
+#### `PointCrossProduct(x1: number, y1: number, x2: number, y2: number): number`
+---
+Calculates the cross product of two points.
+
+##### Arguments:
+- `x1: number`: x-coordinate of point 1.
+- `y1: number`: y-coordinate of point 1.
+- `x2: number`: x-coordinate of point 2.
+- `y2: number`: y-coordinate of point 2.
+
+##### Returns:
+- `Product: number`: Cross product.
+
+#### `AngleBetweenVectors(Vector1: Vector2, Vector2: Vector2): number`
+---
+Calculates the angle between two vectors.
+
+##### Arguments:
+- `Vector1: Vector2`: First vector.
+- `Vector2: Vector2`: Second vector.
+
+##### Returns:
+- `Angle: number`: Angle.
+
+#### `AngleBetweenPoints(x1: number, y1: number, x2: number, y2: number): number`
+---
+Calculates the angle between two points.
+
+##### Arguments:
+- `x1: number`: x-coordinate of point 1.
+- `y1: number`: y-coordinate of point 1.
+- `x2: number`: x-coordinate of point 2.
+- `y2: number`: y-coordinate of point 2.
+
+##### Returns:
+- `Angle: number`: Angle.
+
+#### `VectorMagnitude(Vector: Vector2): number`
+---
+Get the magnitude of a vector.
+
+##### Arguments:
+- `Vector: Vector2`: The vector.
+
+##### Returns:
+- `Magnitude: number`: Vector's magnitude.
+
+#### `NormalizeVector(Vector: Vector2): number, number`
+---
+Normalize a vector.
+
+##### Arguments:
+- `Vector: Vector2`: The vector.
+
+##### Returns:
+- `x: number`: Normalized x.
+- `y: number`: Normalized y.
+
 
 [^1]: **OOP** *src: [This wikipedia page](https://en.wikipedia.org/wiki/Object-oriented_programming)*\
 Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields (often known as attributes or properties), andcode in the form of procedures (often known as methods). In OOP, computer programs are designed by making them out of objects that interact with one another. 

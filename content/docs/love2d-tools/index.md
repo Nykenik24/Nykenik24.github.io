@@ -54,11 +54,11 @@ Here are the modules with already made documentation.
 - OOP
 - Timer
 - Input
+- Message Bus
 
 #### Modules to document
 ---
 Here are the modules that will have documentation, but it's not made.
-- Message Bus
 - State Machine
 - Vector2
 - Mathx

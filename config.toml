@@ -14,14 +14,19 @@ enableGitInfo = true
 	weight = 2
 
 [[menu.main]]
+	name = "<b>B</b>log"
+	url = "/blog"
+	weight = 3
+
+[[menu.main]]
 	name = "<b>T</b>ags"
 	url = "tags"
-	weight = 3
+	weight = 4
 
 [[menu.main]]
 	name = "<b>R</b>epository"
 	url = "https://github.com/Nykenik24/Nykenik24.github.io"
-	weight = 4
+	weight = 5
 
 [params]
 	description = "Nykenik24's Website"

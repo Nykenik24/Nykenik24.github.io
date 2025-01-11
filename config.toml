@@ -44,7 +44,7 @@ enableGitInfo = true
 	noClasses = true
 	noHl = false
 	style = "base16-snazzy"
-	tabWidth = 4
+	tabWidth = 5
 
 	
 [markup.goldmark.renderer]

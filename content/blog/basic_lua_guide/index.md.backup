@@ -2,7 +2,7 @@
 title: "Basic lua guide"
 subtitle: "Introduction to the basics of Lua"
 date: 2025-01-02T12:39:21+01:00
-draft: false
+draft: true
 toc: true
 tags:
     - "guide"

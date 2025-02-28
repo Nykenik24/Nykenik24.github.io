@@ -1,6 +1,12 @@
 # baseURL = "https://nykenik24.github.io"
+title = "nykenik's stuff"
 baseURL = "https://localhost:1313/"
 theme = "neopost"
+titleCaseStyle = "none"
 
 [params]
   theme = "light-blue"
+  posts-per-page = 1
+
+[permalinks]
+  posts = "/posts/:filename/"
